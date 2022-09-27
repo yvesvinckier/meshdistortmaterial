@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import "./App.css";
+import Scene from "./components/Scene";
+import Footer from "./components/Footer";
+import Twitter from "./components/Twitter";
 
-function App() {
+import img1 from "./assets/1.jpg";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Canvas camera={{ position: [0, 0, 12] }}>
+        <Scene url={img1} />
+      </Canvas>
+      <a
+        href="https://twitter.com/NowMoDesign/"
+        style={{ position: "absolute", bottom: 40, left: "4vw", width: 50 }}
+      >
+        <Twitter />
+      </a>
+      <Footer />
+    </>
   );
 }
-
-export default App;
