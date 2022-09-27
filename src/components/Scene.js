@@ -44,8 +44,11 @@ function Image({ url }) {
       ref={imageRef}
       scale-x={10}
       scale-y={10}
+      // eslint-disable-next-line no-sequences
       onClick={(e) => (e.stopPropagation(), setClick(!clicked))}
+      // eslint-disable-next-line no-sequences
       onPointerOver={(e) => (e.stopPropagation(), setHover(true))}
+      // eslint-disable-next-line no-sequences
       onPointerOut={(e) => (e.stopPropagation(), setHover(false))}
     >
       <planeGeometry args={[1, 1, 64, 64]} />
